@@ -13,6 +13,7 @@
 		E59EA16928591BB700102908 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E59EA16728591BB700102908 /* Main.storyboard */; };
 		E59EA16B28591BBC00102908 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E59EA16A28591BBC00102908 /* Assets.xcassets */; };
 		E59EA16E28591BBC00102908 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E59EA16C28591BBC00102908 /* LaunchScreen.storyboard */; };
+		E5AD33D32871DE4E00AA07A8 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AD33D22871DE4E00AA07A8 /* SecondViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		E59EA16A28591BBC00102908 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E59EA16D28591BBC00102908 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E59EA16F28591BBC00102908 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E5AD33D22871DE4E00AA07A8 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				E59EA16A28591BBC00102908 /* Assets.xcassets */,
 				E59EA16C28591BBC00102908 /* LaunchScreen.storyboard */,
 				E59EA16F28591BBC00102908 /* Info.plist */,
+				E5AD33D22871DE4E00AA07A8 /* SecondViewController.swift */,
 			);
 			path = SwiftExercises;
 			sourceTree = "<group>";
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5AD33D32871DE4E00AA07A8 /* SecondViewController.swift in Sources */,
 				E59EA16628591BB700102908 /* ViewController.swift in Sources */,
 				E59EA16228591BB700102908 /* AppDelegate.swift in Sources */,
 				E59EA16428591BB700102908 /* SceneDelegate.swift in Sources */,

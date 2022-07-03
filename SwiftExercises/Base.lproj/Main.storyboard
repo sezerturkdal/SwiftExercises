@@ -85,6 +85,40 @@
             </objects>
             <point key="canvasLocation" x="28.985507246376812" y="53.571428571428569"/>
         </scene>
+        <!--Second View Controller-->
+        <scene sceneID="lf5-2U-VMb">
+            <objects>
+                <viewController id="vMS-0G-x1L" customClass="SecondViewController" customModule="SwiftExercises" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4eK-3R-bjA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Second screen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u2b-4g-o3x">
+                                <rect key="frame" x="107" y="423" width="200" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="SP8-Kc-FrG"/>
+                                    <constraint firstAttribute="height" constant="50" id="aL2-qG-tNt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4g1-5a-sta"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="u2b-4g-o3x" firstAttribute="centerY" secondItem="4eK-3R-bjA" secondAttribute="centerY" id="RUk-8x-c1t"/>
+                            <constraint firstItem="u2b-4g-o3x" firstAttribute="centerX" secondItem="4eK-3R-bjA" secondAttribute="centerX" id="stK-5X-pR9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lblScreenName" destination="u2b-4g-o3x" id="Y9a-au-9qP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O9R-Af-pRb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="759" y="65"/>
+        </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
