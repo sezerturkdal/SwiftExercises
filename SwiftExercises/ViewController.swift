@@ -69,6 +69,15 @@ class ViewController: UIViewController {
         }
     }
     @IBAction func btnSaveClicked(_ sender: Any) {
+        if txtUserName.text=="" {
+            let alert=UIAlertController(title: "Error", message: "Username field is empty", preferredStyle: UIAlertController.Style.alert)
+            let okButton=UIAlertAction(title: "OK", style: UIAlertAction.Style.default) { UIAlertAction in
+                print("Clicked")
+            }
+            
+            alert.addAction(okButton)
+            self.present(alert, animated: true, completion: nil)
+        }
         
         UserDefaults.standard.set(txtUserName.text, forKey: "userName")
         txtUserName.text?.removeAll()
