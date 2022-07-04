@@ -14,10 +14,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var lblResult: UILabel!
     @IBOutlet weak var btnRemove: UIButton!
     
+    @IBOutlet weak var lblHeader: UILabel!
+    var userNameFromMainScreen = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         lblResult.text?.removeAll()
         btnRemove.isHidden=true
+        
+        lblHeader.text = userNameFromMainScreen
     }
 
    
@@ -53,7 +58,5 @@ class ViewController: UIViewController {
         btnRemove.isHidden=true
         lblResult.text="Result: Saved"
     }
-    
-    
 }
 

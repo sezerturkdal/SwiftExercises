@@ -9,11 +9,24 @@ import UIKit
 
 class SecondViewController: UIViewController {
 
-    @IBOutlet weak var lblScreenName: UILabel!
+    var userName=""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    @IBAction func btnSecondClicked(_ sender: Any) {
+        userName = "NewUser"
+        performSegue(withIdentifier: "toSecondVC", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue .identifier == "toSecondVC"{
+            let destinationVC = segue.destination as! ViewController
+            destinationVC.userNameFromMainScreen = userName
+        }
     }
 
 }
