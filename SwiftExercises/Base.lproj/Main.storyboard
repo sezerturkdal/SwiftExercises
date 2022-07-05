@@ -97,6 +97,49 @@
             </objects>
             <point key="canvasLocation" x="939.13043478260875" y="53.571428571428569"/>
         </scene>
+        <!--Gesture Recognizer View Controller-->
+        <scene sceneID="pQO-JM-x2y">
+            <objects>
+                <viewController id="QDS-JX-uL3" customClass="GestureRecognizerViewController" customModule="SwiftExercises" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bq1-9J-i5F">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lock" translatesAutoresizingMaskIntoConstraints="NO" id="fkh-SR-GBk">
+                                <rect key="frame" x="107" y="188" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="FGo-jE-CMk"/>
+                                    <constraint firstAttribute="width" constant="200" id="wUh-qt-i5g"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Locked" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XMH-MZ-ZV7">
+                                <rect key="frame" x="50" y="496" width="314" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bvp-Cw-DSy"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="XMH-MZ-ZV7" firstAttribute="top" secondItem="fkh-SR-GBk" secondAttribute="bottom" constant="108" id="DqE-l5-vfQ"/>
+                            <constraint firstItem="fkh-SR-GBk" firstAttribute="top" secondItem="bvp-Cw-DSy" secondAttribute="top" constant="100" id="Kxl-gW-J75"/>
+                            <constraint firstItem="fkh-SR-GBk" firstAttribute="centerX" secondItem="bq1-9J-i5F" secondAttribute="centerX" id="YG5-Yj-XuH"/>
+                            <constraint firstItem="XMH-MZ-ZV7" firstAttribute="leading" secondItem="bvp-Cw-DSy" secondAttribute="leading" constant="50" id="b2l-FH-pod"/>
+                            <constraint firstItem="XMH-MZ-ZV7" firstAttribute="centerX" secondItem="bq1-9J-i5F" secondAttribute="centerX" id="jqL-x6-kfa"/>
+                            <constraint firstItem="bvp-Cw-DSy" firstAttribute="trailing" secondItem="XMH-MZ-ZV7" secondAttribute="trailing" constant="50" id="s19-1F-MMN"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="rKf-0t-n5G"/>
+                    <connections>
+                        <outlet property="imgLock" destination="fkh-SR-GBk" id="DmV-at-iMz"/>
+                        <outlet property="lblLock" destination="XMH-MZ-ZV7" id="per-lc-zR2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="32d-ae-s2b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1730.4347826086957" y="66.964285714285708"/>
+        </scene>
         <!--Second View Controller-->
         <scene sceneID="lf5-2U-VMb">
             <objects>
@@ -128,11 +171,26 @@
                                     <action selector="btnSecondClicked:" destination="6Bh-yF-taE" eventType="touchUpInside" id="oMi-NI-ufi"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Id1-sa-oD3">
+                                <rect key="frame" x="107" y="258" width="200" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="pvY-wo-Qy1"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Gesture recognizer"/>
+                                <connections>
+                                    <action selector="btnSecondClicked:" destination="vMS-0G-x1L" eventType="touchUpInside" id="34J-lA-JB0"/>
+                                    <action selector="btnSecondClicked:" destination="6Bh-yF-taE" eventType="touchUpInside" id="vNc-BY-PGH"/>
+                                    <segue destination="QDS-JX-uL3" kind="show" id="1Jb-Xb-NNo"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4g1-5a-sta"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Hfh-IM-pYd" firstAttribute="centerX" secondItem="4eK-3R-bjA" secondAttribute="centerX" id="AVC-eU-pDh"/>
+                            <constraint firstItem="Id1-sa-oD3" firstAttribute="centerX" secondItem="4eK-3R-bjA" secondAttribute="centerX" id="Htf-wE-MqL"/>
+                            <constraint firstItem="Id1-sa-oD3" firstAttribute="top" secondItem="Hfh-IM-pYd" secondAttribute="bottom" constant="39" id="IcK-6r-UEu"/>
                             <constraint firstItem="s2S-jL-JRT" firstAttribute="centerX" secondItem="4eK-3R-bjA" secondAttribute="centerX" id="RZI-Pg-p1g"/>
                             <constraint firstItem="s2S-jL-JRT" firstAttribute="top" secondItem="4g1-5a-sta" secondAttribute="top" constant="30" id="rwP-kl-OJ5"/>
                             <constraint firstItem="Hfh-IM-pYd" firstAttribute="top" secondItem="s2S-jL-JRT" secondAttribute="bottom" constant="39" id="yKn-Of-IQf"/>
@@ -171,6 +229,7 @@
         <segue reference="sXU-tR-6Ia"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="lock" width="64" height="64"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
