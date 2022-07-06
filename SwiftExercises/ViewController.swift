@@ -15,7 +15,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var btnRemove: UIButton!
     
     @IBOutlet weak var lblHeader: UILabel!
+    @IBOutlet weak var lblCount: UILabel!
     var userNameFromMainScreen = ""
+    var timer=Timer()
+    var counter=0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -84,5 +87,25 @@ class ViewController: UIViewController {
         btnRemove.isHidden=true
         lblResult.text="Result: Saved"
     }
+    @IBAction func textEditing(_ sender: Any) {
+        
+        counter=10
+        
+        timer=Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(txtEditing), userInfo: nil, repeats: true)
+            
+            
+        }
+    
+    @objc func txtEditing(){
+        
+        lblCount.text="Time: \(counter)"
+        counter-=1
+        
+        if counter<0{
+            timer.invalidate()
+            txtUserName.text?.removeAll()
+        }
+    }
+    
 }
 
