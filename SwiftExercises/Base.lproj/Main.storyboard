@@ -254,11 +254,49 @@
                     <navigationItem key="navigationItem" id="v3U-L3-t2B"/>
                     <connections>
                         <outlet property="tblView" destination="CV6-O2-7hK" id="0eX-cX-cZj"/>
+                        <segue destination="5Xt-nX-rCF" kind="show" identifier="toDetailImageViewController" id="wlT-OK-Lzw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ELC-0J-pWX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136" y="765"/>
+        </scene>
+        <!--Detail Image View Controller-->
+        <scene sceneID="GZd-zb-xjq">
+            <objects>
+                <viewController id="5Xt-nX-rCF" customClass="DetailImageViewController" customModule="SwiftExercises" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uYp-xi-1R4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CcJ-hw-7cE">
+                                <rect key="frame" x="29" y="222" width="357" height="251"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pMb-Os-W9T">
+                                <rect key="frame" x="30" y="111" width="354" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0mU-GT-aKY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0mU-GT-aKY" firstAttribute="trailing" secondItem="pMb-Os-W9T" secondAttribute="trailing" constant="30" id="TNf-Id-AFM"/>
+                            <constraint firstItem="pMb-Os-W9T" firstAttribute="top" secondItem="0mU-GT-aKY" secondAttribute="top" constant="23" id="WXA-og-Lob"/>
+                            <constraint firstItem="pMb-Os-W9T" firstAttribute="leading" secondItem="0mU-GT-aKY" secondAttribute="leading" constant="30" id="Z62-F7-UUg"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="USo-ox-p4v"/>
+                    <connections>
+                        <outlet property="imgCity" destination="CcJ-hw-7cE" id="IJ3-oN-6Fo"/>
+                        <outlet property="lblName" destination="pMb-Os-W9T" id="neG-5I-N81"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I1T-Hj-OdM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="940.57971014492762" y="828.34821428571422"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="epM-bT-B2a">

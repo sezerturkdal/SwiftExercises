@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E51E93EF288F037300FFDE01 /* DetailImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51E93EE288F037300FFDE01 /* DetailImageViewController.swift */; };
 		E5610A2A28849D6B00F8DF39 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5610A2928849D6B00F8DF39 /* TableViewController.swift */; };
 		E580B63C2874B6A200E1E6CD /* GestureRecognizerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E580B63B2874B6A200E1E6CD /* GestureRecognizerViewController.swift */; };
 		E59EA16228591BB700102908 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59EA16128591BB700102908 /* AppDelegate.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E51E93EE288F037300FFDE01 /* DetailImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailImageViewController.swift; sourceTree = "<group>"; };
 		E5610A2928849D6B00F8DF39 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		E580B63B2874B6A200E1E6CD /* GestureRecognizerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureRecognizerViewController.swift; sourceTree = "<group>"; };
 		E59EA15E28591BB700102908 /* SwiftExercises.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftExercises.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,6 +70,7 @@
 				E5AD33D22871DE4E00AA07A8 /* EntryScreenViewController.swift */,
 				E580B63B2874B6A200E1E6CD /* GestureRecognizerViewController.swift */,
 				E5610A2928849D6B00F8DF39 /* TableViewController.swift */,
+				E51E93EE288F037300FFDE01 /* DetailImageViewController.swift */,
 				E59EA16728591BB700102908 /* Main.storyboard */,
 				E59EA16A28591BBC00102908 /* Assets.xcassets */,
 				E59EA16C28591BBC00102908 /* LaunchScreen.storyboard */,
@@ -152,6 +155,7 @@
 				E59EA16628591BB700102908 /* ViewController.swift in Sources */,
 				E580B63C2874B6A200E1E6CD /* GestureRecognizerViewController.swift in Sources */,
 				E59EA16228591BB700102908 /* AppDelegate.swift in Sources */,
+				E51E93EF288F037300FFDE01 /* DetailImageViewController.swift in Sources */,
 				E59EA16428591BB700102908 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

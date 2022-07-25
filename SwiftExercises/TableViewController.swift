@@ -13,8 +13,13 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     var landmarkNames=[String]()
     var landmarkImages=[UIImage]()
     
+    var chosenLandmarkName=""
+    var chosenLandmarkImage=UIImage()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationItem.title="Cities"
 
         tblView.delegate=self
         tblView.dataSource=self
@@ -48,7 +53,22 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
         return landmarkNames.count
     }
     
-
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+         chosenLandmarkName=landmarkNames[indexPath.row]
+         chosenLandmarkImage=landmarkImages[indexPath.row]
+        
+        
+        performSegue(withIdentifier: "toDetailImageViewController", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier=="toDetailImageViewController"{
+            let destinationVC=segue.destination as! DetailImageViewController
+            destinationVC.selectedLandmarkName=chosenLandmarkName
+            destinationVC.selectedLandmarkImage=chosenLandmarkImage
+        }
+    }
+    
     /*
     // MARK: - Navigation
 
