@@ -10,22 +10,42 @@ import UIKit
 class TableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tblView: UITableView!
+    var landmarkNames=[String]()
+    var landmarkImages=[UIImage]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         tblView.delegate=self
         tblView.dataSource=self
-        // Do any additional setup after loading the view.
+        
+        landmarkNames.append("Amsterdam")
+        landmarkNames.append("Paris")
+        landmarkNames.append("Rome")
+        
+        landmarkImages.append(UIImage(named: "amsterdam.jpeg")!)
+        landmarkImages.append(UIImage(named: "paris.jpeg")!)
+        landmarkImages.append(UIImage(named: "rome.jpeg")!)
     }
+    
+    
+     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+       
+        if editingStyle == .delete{
+            landmarkNames.remove(at: indexPath.row)
+            landmarkImages.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.fade)
+        }
+       }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        cell.textLabel?.text="test"
+        cell.textLabel?.text=landmarkNames[indexPath.row]
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return landmarkNames.count
     }
     
 
